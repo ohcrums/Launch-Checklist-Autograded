@@ -176,13 +176,13 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 async function myFetch() {
     let planetsReturned;
 
-    planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function (response) {
-        response.json().then( function(json) {
-        })
+    planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function (response)
+    {
+        return response.json();
+    }).then( function(json) {
+        return json;
     });
 
-    // was using this return, but npm sometimes times out waiting to pass last test
-    // return await planetsReturned.json();
     
     return planetsReturned;
 }
