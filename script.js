@@ -25,7 +25,7 @@ window.addEventListener("load", function() {
     })
 
     // add evebt listener for form submission button
-    document.getElementById("formSubmit").addEventListener("click", function (event) {
+    document.querySelector("form").addEventListener("submit", function (event) {
         event.preventDefault();
 
         // initialize parameters
