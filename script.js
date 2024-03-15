@@ -27,6 +27,7 @@ window.addEventListener("load", function() {
     // add evebt listener for form submission button
     document.querySelector("form").addEventListener("submit", function (event) {
         event.preventDefault();
+        console.log("click");
 
         // initialize parameters
         let pilot = document.querySelector("input[name='pilotName']").value;
@@ -34,10 +35,10 @@ window.addEventListener("load", function() {
         let fuelLevel = document.querySelector("input[name='fuelLevel']").value;
         let cargoLevel = document.querySelector("input[name='cargoMass']").value;
 
-        let list = document.getElementById("faultyItems").value;
+        let list = document.getElementById("faultyItems");
 
         // call the submission function
-        formSubmission(document, pilot, list, pilot, copilot, fuelLevel, cargoLevel);
+        formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
 
     });
 
