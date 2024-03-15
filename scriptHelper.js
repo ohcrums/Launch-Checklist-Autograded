@@ -68,36 +68,36 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
     // alert blueprint
     // this is all working in node, but doesn't seem to work here    
-    let inputList = [pilotInput, copilotInput, fuelInput, cargoInput];
-    let allValid = false;
-    let validList = [];
-    for (let index in inputList) {
-        let item = inputList[index];
-        if (item === 'Empty') {
-            // PREVENT SUBMISSION
-            // can't use alert because it doesnt work in jest
-            console.log(item, "-- it's empty");
-        }else if (item === "Is a Number") {
-            // PREVENT SUBMISSION
-            console.log(item, "-- it's not a string")
-        } else if (item === "Not a Number") {
-            // GO AHEAD
-            validList.push(true);
-            console.log(item, index, "valid")
-        }
-    }
+    // let inputList = [pilotInput, copilotInput, fuelInput, cargoInput];
+    // let allValid = false;
+    // let validList = [];
+    // for (let index in inputList) {
+    //     let item = inputList[index];
+    //     if (item === 'Empty') {
+    //         // PREVENT SUBMISSION
+    //         // can't use alert because it doesnt work in jest
+    //         console.log(item, "-- it's empty");
+    //     }else if (item === "Is a Number") {
+    //         // PREVENT SUBMISSION
+    //         console.log(item, "-- it's not a string")
+    //     } else if (item === "Not a Number") {
+    //         // GO AHEAD
+    //         validList.push(true);
+    //         console.log(item, index, "valid")
+    //     }
+    // }
 
-    if (validList.length == inputList.length) {
-        allValid = true;
-    } else {
-        allValid = false;
-    }
+    // if (validList.length == inputList.length) {
+    //     allValid = true;
+    // } else {
+    //     allValid = false;
+    // }
 
-    if (allValid) {
-        console.log("all inputs valid")
-    } else {
-        console.log("invalid inputs")
-    }
+    // if (allValid) {
+    //     console.log("all inputs valid")
+    // } else {
+    //     console.log("invalid inputs")
+    // }
 
 
     pilotStatus.textContent = `Pilot ${pilot} is ready for launch`;

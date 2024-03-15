@@ -1,5 +1,6 @@
 // const { myFetch } = require("./scriptHelper");
-const { myFetch, formSubmission, pickPlanet, addDestinationInfo } = require('./scriptHelper');
+// const { myFetch, formSubmission, pickPlanet, addDestinationInfo } = require('./scriptHelper');
+
 
 window.addEventListener("load", function() {
 
@@ -19,7 +20,7 @@ window.addEventListener("load", function() {
 
         // calls with chosenPlanet's keys as parameters
         // sets the innerHtml of the missionTarget to include information from the chosen planet object
-        addDestinationInfo(document, chosenPlanet.name, chosenPlanet.diameter, chosenPlanet.star, chosenPlanet.distance, chosenPlanet.moons, chosenPlanet.imageUrl)
+        addDestinationInfo(document, chosenPlanet.name, chosenPlanet.diameter, chosenPlanet.star, chosenPlanet.distance, chosenPlanet.moons, chosenPlanet.image)
         
     })
 
