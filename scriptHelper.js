@@ -64,6 +64,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     const fuelStatus = document.getElementById("fuelStatus");
     const cargoStatus = document.getElementById("cargoStatus");
 
+    // check input values against validateInput for desired data type. 
+    // if entry is valid, add some value to validList array. if invalid, throw an alert.
     let inputList = [pilot, copilot, fuelLevel, cargoLevel];
     let validList = [];
     if (validateInput(pilot) == "Not a Number") {
@@ -87,7 +89,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         alert(`Invalid Cargo Level\nInput: ${cargoLevel}\nIssue: ${validateInput(cargoLevel)}`);
     }
 
-
+    // if all inputs are valid, proceed in generating results.
     if (validList.length == inputList.length) {
 
         pilotStatus.textContent = `Pilot ${pilot} is ready for launch`;
