@@ -69,27 +69,26 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     if (validateInput(pilot) == "Not a Number") {
         validList.push(true);
     } else {
-        console.log("invalid input,", pilot, validateInput(pilot))
+        alert(`Invalid Pilot\nInput: ${pilot}\nIssue: ${validateInput(pilot)}`);
     }
     if (validateInput(copilot) == "Not a Number") {
         validList.push(true);
     }  else {
-        console.log("invalid input,", copilot, validateInput(copilot))
+        alert(`Invalid Copilot.\nInput: ${copilot}\nIssue: ${validateInput(copilot)}`);
     }
     if (validateInput(fuelLevel) == "Is a Number") {
         validList.push(true);
     } else {
-        console.log("invalid input,", fuelLevel, validateInput(fuelLevel))
+        alert(`Invalid Fuel Level\nInput: ${fuelLevel}\nIssue: ${validateInput(fuelLevel)}`);
     }
     if (validateInput(cargoLevel) == "Is a Number") {
         validList.push(true);
     }  else {
-        console.log("invalid input,", cargoLevel, validateInput(cargoLevel))
+        alert(`Invalid Cargo Level\nInput: ${cargoLevel}\nIssue: ${validateInput(cargoLevel)}`);
     }
 
 
     if (validList.length == inputList.length) {
-        console.log("VALID");
 
         pilotStatus.textContent = `Pilot ${pilot} is ready for launch`;
         copilotStatus.textContent = `Co-pilot ${copilot} is ready for launch`;
@@ -121,8 +120,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                 launchStatus.style.color = 'green' ;
             }
         }  
-    } else {
-        console.log("INVALID");
     }
 }
  
